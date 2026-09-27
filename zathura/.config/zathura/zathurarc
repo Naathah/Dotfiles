@@ -1,0 +1,11 @@
+include noctaliarc
+
+set window-title-basename true
+set statusbar-basename true
+
+set guioptions "s"
+
+set recolor true
+set recolor-keephue true
+
+unmap q

@@ -1,0 +1,35 @@
+prefer-no-csd
+
+layout {
+    gaps 8
+    center-focused-column "never"
+    always-center-single-column
+    preset-column-widths {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
+        proportion 1.0
+    }
+
+    focus-ring {
+        off
+    }
+
+    background-color "transparent"
+
+    default-column-width { proportion 0.5; }
+
+    border {
+        on
+        width 2
+        active-gradient from="#0DB7D4" to="#9778D0" angle=90
+        inactive-color "#04404A"
+    }
+
+    struts {
+        left 0
+        right 0
+        top 0
+        bottom 0
+    }
+}

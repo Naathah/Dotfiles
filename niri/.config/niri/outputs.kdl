@@ -1,0 +1,14 @@
+output "HDMI-A-1" {
+    mode "1440x900@59.887"
+    scale 1
+    transform "normal"
+    position x=0 y=0
+
+    hot-corners {
+        // off
+        top-left
+        // top-right
+        // bottom-left
+        // bottom-right
+    }
+}

@@ -1,0 +1,57 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "restore_on_startup": "launchpad",
+  "cli_default_open_behavior": "existing_window",
+  "session": {
+    "trust_all_worktrees": true
+  },
+  "title_bar": {
+    "show_branch_status_icon": true,
+    "button_layout": "platform_default",
+    "show_menus": false,
+    "show_sign_in": false
+  },
+  "toolbar": {
+    "code_actions": false,
+    "quick_actions": true,
+    "breadcrumbs": true
+  },
+  "tab_bar": {
+    "show": false
+  },
+  "vim_mode": true,
+  "vim": {
+    "show_edit_predictions_in_normal_mode": false,
+    "toggle_relative_line_numbers": true
+  },
+  "buffer_font_family": "GeistMono Nerd Font",
+  "ui_font_family": ".ZedMono",
+  "terminal": {
+    "toolbar": {
+      "breadcrumbs": false
+    },
+    "font_size": 18.0,
+    "font_family": "GeistMono Nerd Font"
+  },
+  "auto_update": false,
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+    "anthropic_retention": false
+  },
+  "disable_ai": true,
+  "ui_font_size": 16,
+  "buffer_font_size": 16.0,
+  "theme": {
+    "mode": "system",
+    "light": "Noctalia Light",
+    "dark": "Noctalia Dark",
+  },
+}

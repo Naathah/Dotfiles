@@ -1,0 +1,6 @@
+hotkey-overlay {
+//    skip-at-startup
+}
+
+screenshot-path "~/Pictures/Screenshots/Screenshot from %d-%m-%Y %H-%M-%S.png"
+//screenshot-notification-disable
