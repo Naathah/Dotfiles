@@ -205,3 +205,5 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 if [ -e /home/nath/.nix-profile/etc/profile.d/nix.sh ]; then . /home/nath/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+source ~/.config/fzf/themes/noctalia.sh
