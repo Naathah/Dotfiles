@@ -1,9 +1,8 @@
 include noctaliarc
 
+set window-title-page true
 set window-title-basename true
-set statusbar-basename true
-
-set guioptions "s"
+set guioptions none
 
 set recolor true
 set recolor-keephue true
