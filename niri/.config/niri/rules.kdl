@@ -1,13 +1,36 @@
-layer-rule {
-  match namespace="^noctalia-backdrop"
-  place-within-backdrop true
+// -----------------------------------------------------------------------------
+// DEBUG & SYSTEM SETTINGS
+// -----------------------------------------------------------------------------
+debug {
+    honor-xdg-activation-with-invalid-serial
 }
 
+// -----------------------------------------------------------------------------
+// LAYER RULES (NOCTALIA UI)
+// -----------------------------------------------------------------------------
+layer-rule {
+    match namespace="^noctalia-backdrop"
+    place-within-backdrop true
+}
+
+layer-rule {
+    match namespace="^noctalia.*"
+    background-effect {
+        xray false
+    }
+}
+
+// -----------------------------------------------------------------------------
+// GLOBAL WINDOW RULES
+// -----------------------------------------------------------------------------
 window-rule {
     geometry-corner-radius 0
     clip-to-geometry true
 }
 
+// -----------------------------------------------------------------------------
+// VISUALS: OPACITY, BLUR, AND BORDERS
+// -----------------------------------------------------------------------------
 window-rule {
     match app-id="zed"
     match app-id="org.telegram.desktop"
@@ -16,30 +39,42 @@ window-rule {
 }
 
 window-rule {
-    match app-id="^(steam_app_.*)$"
-    variable-refresh-rate true
-    open-fullscreen true
-}
-
-window-rule {
-    match app-id="localsend"
-    match app-id="^signal$"
-    default-column-width { proportion 0.3333333333333333; }
-}
-
-window-rule {
-    match app-id="celluloid"
-    default-column-width { proportion 1.0; }
-}
-
-window-rule {
     match app-id="kitty"
     draw-border-with-background false
 }
 
 window-rule {
-    match app-id="steam" title=r"^notificationtoasts_\d+_desktop$"
-    default-floating-position x=10 y=10 relative-to="bottom-right"
+    match app-id="org.pwmt.zathura"
+    background-effect {
+        blur true
+        xray false
+    }
+}
+
+window-rule {
+    match app-id=r"^org\.wezfurlong\.wezterm$"
+    match app-id="Alacritty"
+    match app-id="com.mitchellh.ghostty"
+    match app-id="foot"
+    match app-id="^org.gnome.Calculator$"
+    match app-id="Nautilus"
+    match app-id="KeePassXC"
+    match app-id="^signal$"
+    match app-id="^org.gnome.TextEditor$"
+    opacity 0.75
+    draw-border-with-background false
+    background-effect {
+        blur true
+        xray false
+    }
+}
+
+// -----------------------------------------------------------------------------
+// LAYOUT: COLUMN PROPORTIONS
+// -----------------------------------------------------------------------------
+window-rule {
+    match app-id="celluloid"
+    default-column-width { proportion 1.0; }
 }
 
 window-rule {
@@ -50,6 +85,15 @@ window-rule {
     open-floating false
 }
 
+window-rule {
+    match app-id="localsend"
+    match app-id="^signal$"
+    default-column-width { proportion 0.3333333333333333; }
+}
+
+// -----------------------------------------------------------------------------
+// FLOATING WINDOWS & POPUPS
+// -----------------------------------------------------------------------------
 window-rule {
     match app-id=r"^org\.gnome\.Calculator$"
     match app-id=r"^gnome-calculator$"
@@ -66,33 +110,15 @@ window-rule {
 }
 
 window-rule {
-    match app-id=r"^org\.wezfurlong\.wezterm$"
-    match app-id="Alacritty"
-    match app-id="com.mitchellh.ghostty"
-    match app-id="foot"
-    match app-id="^org.gnome.Calculator$"
-    match app-id="Nautilus"
-    match app-id="KeePassXC"
-    match app-id="^signal$"
-    match app-id="^org.gnome.TextEditor$"
-    opacity 0.75
-    background-effect {
-    blur true
-    xray false
-    }
-    draw-border-with-background false
+    match app-id="steam" title=r"^notificationtoasts_\d+_desktop$"
+    default-floating-position x=10 y=10 relative-to="bottom-right"
 }
 
-
+// -----------------------------------------------------------------------------
+// GAMING & FULLSCREEN
+// -----------------------------------------------------------------------------
 window-rule {
-    match app-id="org.pwmt.zathura"
-    background-effect {
-        blur true
-        xray false
-    }
-}
-
-
-debug {
-    honor-xdg-activation-with-invalid-serial
+    match app-id="^(steam_app_.*)$"
+    variable-refresh-rate true
+    open-fullscreen true
 }
