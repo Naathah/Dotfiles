@@ -78,9 +78,20 @@ window-rule {
     opacity 0.75
     background-effect {
     blur true
+    xray false
     }
     draw-border-with-background false
 }
+
+
+window-rule {
+    match app-id="org.pwmt.zathura"
+    background-effect {
+        blur true
+        xray false
+    }
+}
+
 
 debug {
     honor-xdg-activation-with-invalid-serial
