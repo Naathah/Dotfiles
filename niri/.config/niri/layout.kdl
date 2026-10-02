@@ -25,11 +25,4 @@ layout {
         active-gradient from="#0DB7D4" to="#9778D0" angle=90
         inactive-color "#04404A"
     }
-
-    struts {
-        left 0
-        right 0
-        top 0
-        bottom 0
-    }
 }
