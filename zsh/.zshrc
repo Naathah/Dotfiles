@@ -28,6 +28,10 @@ alias pdf='file=$(find -type f -name "*.pdf" | fzf) && [ -n "$file" ] && zathura
 # alias update="nh os switch --update && z -"
 # alias clean="nh clean all"
 # alias config='editor "$NH_FLAKE/configuration.nix"'
+alias clean="sudo pacman -Rcns $(pacman -Qdtq)"
+alias ins="sudo pacman -S"
+alias upd="sudo pacman -Syu"
+alias rmv="sudo pacman -Rns"
 
 # History
 HISTFILE=~/.zsh_history
@@ -149,7 +153,7 @@ f() {
         fi
     done
     if [[ ${#text_files[@]} -gt 0 ]]; then
-        nvim "${text_files[@]}" </dev/tty
+        vis "${text_files[@]}" </dev/tty
     fi
 }
 
