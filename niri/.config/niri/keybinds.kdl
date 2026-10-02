@@ -4,7 +4,7 @@ binds {
     // ==========================================
     Mod+T { spawn "kitty"; }
     Mod+Return { spawn "kitty"; }
-    Mod+W { spawn "zen-browser"; }
+    Mod+W { spawn "helium-browser"; }
     Mod+E { spawn "nautilus"; }
     XF86Calculator { spawn "noctalia" "msg" "panel-toggle" "samuelskovbakke/calculator-plus:panel"; }
     F12 { spawn "noctalia" "msg" "panel-toggle" "samuelskovbakke/calculator-plus:panel"; }
